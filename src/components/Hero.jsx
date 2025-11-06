@@ -1,11 +1,11 @@
-import { Star, UtensilsCrossed } from "lucide-react";
+import { Star, UtensilsCrossed, Phone } from "lucide-react"; // ✅ Added Phone icon
 
 const Hero = () => {
-  
   return (
     <section id="home" className="min-h-screen relative overflow-hidden bg-[#13331b]">
       <div className="absolute inset-0 bg-gradient-to-br from-[#bfa14a]/30 via-[#13331b] to-[#bfa14a]/10"></div>
-      
+
+      {/* Subtle background blur effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#bfa14a] rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#bfa14a] rounded-full filter blur-3xl"></div>
@@ -13,7 +13,7 @@ const Hero = () => {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 min-h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
-          {/* Left Section */}
+          {/* Left Section: Text Content */}
           <div className="space-y-8">
             <div className="inline-block">
               <span className="text-[#bfa14a] text-sm font-semibold tracking-[0.3em] mb-4 inline-block">
@@ -33,20 +33,30 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <button className="group relative overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              {/* ORDER NOW button with old style & WhatsApp redirect */}
+              <a
+                href="https://wa.me/919344813787"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden transform hover:scale-105 transition-transform duration-300 shadow-xl"
+              >
+                {/* Background gradient for the button */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#bfa14a] to-[#f0e6c3]"></div>
-                <div className="relative px-10 py-5 text-[#13331b] font-bold text-lg tracking-wider">
-                  ORDER NOW
+                <div className="relative flex items-center justify-center px-10 py-6 text-[#13331b] font-bold text-lg tracking-wider">
+                  <span>ORDER NOW</span>
+                  <Phone className="ml-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-              </button>
+              </a>
 
-              <button className="group relative overflow-hidden border-2 border-[#bfa14a]/70 hover:border-[#bfa14a] transition-all duration-300 transform hover:scale-105">
-                <div className="relative px-10 py-5 text-[#bfa14a] font-bold text-lg tracking-wider transition-colors duration-300">
+              {/* VIEW MENU button (unchanged) */}
+              <button className="group relative overflow-hidden border-2 border-[#bfa14a]/70 hover:border-[#bfa14a] transition-all duration-300 transform hover:scale-105 shadow-xl">
+                <a href="#menu"className="relative px-10 py-5 text-[#bfa14a] font-bold text-lg tracking-wider transition-colors duration-300">
                   VIEW MENU
-                </div>
+                </a>
               </button>
             </div>
 
+            {/* Review and Legacy Stats */}
             <div className="flex items-center gap-8 pt-8">
               <div>
                 <div className="flex text-[#bfa14a] mb-2">
@@ -66,24 +76,30 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Section */}
-          <div className="relative">
-            <div className="relative aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#bfa14a]/20 to-[#f0e6c3]/20 rounded-3xl transform rotate-6 transition-transform duration-700 hover:rotate-12"></div>
-              <div className="absolute inset-0 bg-gradient-to-tl from-[#bfa14a]/30 to-[#f0e6c3]/30 rounded-3xl transform -rotate-6 transition-transform duration-700 hover:-rotate-12"></div>
-              <div className="relative bg-gradient-to-br from-[#1e4222] to-[#13331b] rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-700 hover:scale-105">
-                <div className="absolute inset-0 bg-[#13331b]/60"></div>
-                <div className="relative h-full flex items-center justify-center p-12">
-                  <div className="text-center space-y-6">
-                    <UtensilsCrossed className="h-24 w-24 text-[#bfa14a] mx-auto" />
-                    <h3 className="text-4xl font-bold text-[#bfa14a]">Authentic</h3>
-                    <p className="text-xl text-[#f0e6c3]">Malaysian Flavors</p>
-                  </div>
-                </div>
+          {/* Right Section: Modern Food Image Display (Updated) */}
+          <div className="relative p-8 lg:p-0">
+            <div className="relative aspect-square max-w-lg mx-auto">
+              
+              {/* Back layer: decorative border effect */}
+              <div className="absolute inset-0 transform -rotate-12 rounded-3xl border-4 border-[#bfa14a]/50 transition-transform duration-700 group-hover:rotate-6 shadow-2xl"></div>
+              
+              {/* Middle layer: a slight gold background blur */}
+              <div className="absolute inset-0 transform rotate-6 bg-[#bfa14a]/10 rounded-3xl transition-transform duration-700 group-hover:-rotate-6"></div>
+              
+              {/* Front layer: the food image itself */}
+              <div className="group relative h-full w-full rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] transform">
+                <img 
+                  src="/landing.png" // ❗ UPDATE THIS PATH TO YOUR IMAGE FILE ❗
+                  alt="Authentic Nasi Kandar dish with rice, fried chicken, and rich curries"
+                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                  loading="eager"
+                />
+                
+                {/* Optional: Dark overlay for effect */}
+                <div className="absolute inset-0 bg-[#13331b]/10 transition-colors duration-500 group-hover:bg-transparent"></div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
