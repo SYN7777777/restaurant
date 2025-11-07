@@ -89,7 +89,7 @@ const Hero = () => {
               {/* Front layer: the food image itself */}
               <div className="group relative h-full w-full rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] transform">
                 <img 
-                  src="/landing.png" // ❗ UPDATE THIS PATH TO YOUR IMAGE FILE ❗
+                  src="/landing-min.png" // ❗ UPDATE THIS PATH TO YOUR IMAGE FILE ❗
                   alt="Authentic Nasi Kandar dish with rice, fried chicken, and rich curries"
                   className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
