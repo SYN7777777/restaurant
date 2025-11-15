@@ -16,7 +16,7 @@ const Hero = () => {
           {/* Left Section: Text Content */}
           <div className="space-y-8">
             <div className="inline-block">
-              <span className="text-[#bfa14a] text-sm font-semibold tracking-[0.3em] mb-4 inline-block">
+              <span className="text-[#bfa14a] text-sm font-semibold tracking-[0.3em] mb-2 mt-6 inline-block">
                 AUTHENTIC MALAYSIAN CUISINE
               </span>
             </div>

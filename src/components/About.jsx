@@ -44,9 +44,9 @@ const About = () => {
       {/* Image 1: Square Gold-Toned */}
       <div className="relative aspect-square rounded-2xl shadow-lg shadow-[#bfa14a]/20 overflow-hidden">
         <img
-          src="/image.jpg" // <--- REPLACE THIS URL
+          src="/chef.png" // <--- REPLACE THIS URL
           alt="Luxury hotel dining area"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover "
         />
       </div>
 
