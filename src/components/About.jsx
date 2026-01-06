@@ -8,6 +8,7 @@ const About = () => {
         <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[#bfa14a] rounded-full blur-3xl"></div>
         <div className="absolute top-0 left-1/4 w-80 h-80 bg-[#bfa14a] rounded-full blur-3xl"></div>
       </div>
+
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* About Content */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
@@ -24,7 +25,7 @@ const About = () => {
                 The AFC Ali Nasi Kandar story began in 1971 , Ali founded the first eatery in Penang, serving traditional recipes on the streets that soon became a local sensation.
               </p>
               <p>
-                In 2010, our headquarters opened at M Avenue in Segambam, continuing the founder’s vision of authentic Malaysian dining.
+                In 2010, our headquarters opened at M Avenue in Segambam, continuing the founder's vision of authentic Malaysian dining.
               </p>
               <p>
                 By 2020, AFC Ali Nasi Kandar had become a name recognized for its dedication to quality, authenticity, and heritage.
@@ -37,51 +38,65 @@ const About = () => {
               We are specialists in <span className="font-semibold text-[#bfa14a]">Nasi Kandar</span> and <span className="font-semibold text-[#bfa14a]">Roti Canai</span>, beloved classics that showcase the rich taste of Malaysia and the generations of culinary expertise in our family.
             </div>
           </div>
+
           {/* Image Grid or Decorative Cards */}
-         <div>
-  <div className="grid grid-cols-2 gap-6">
-    <div className="space-y-6">
-      {/* Image 1: Square Gold-Toned */}
-      <div className="relative aspect-square rounded-2xl shadow-lg shadow-[#bfa14a]/20 overflow-hidden">
-        <img
-          src="/chef.png" // <--- REPLACE THIS URL
-          alt="Luxury hotel dining area"
-          className="absolute inset-0 w-full h-full object-cover "
-        />
-      </div>
+          <div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="space-y-6">
+                {/* Image 1: Square Gold-Toned */}
+                <div className="relative aspect-square rounded-2xl shadow-lg shadow-[#bfa14a]/20 overflow-hidden">
+                  <img
+                    src="/chef.png"
+                    alt="Professional chef in AFC Ali Nasi Kandar kitchen"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                    width="300"
+                    height="300"
+                  />
+                </div>
 
-      {/* Image 2: Video Aspect Dark-Toned */}
-      <div className="relative aspect-video rounded-2xl shadow-lg shadow-black/20 overflow-hidden">
-        <img
-          src="/image2.jpg" // <--- REPLACE THIS URL
-          alt="Modern restaurant interior"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
-    </div>
+                {/* Image 2: Video Aspect Dark-Toned */}
+                <div className="relative aspect-video rounded-2xl shadow-lg shadow-black/20 overflow-hidden">
+                  <img
+                    src="/image2.jpg"
+                    alt="Modern and welcoming restaurant interior"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="225"
+                  />
+                </div>
+              </div>
 
-    <div className="space-y-6 pt-12">
-      {/* Image 3: Video Aspect Dark-Toned */}
-      <div className="relative aspect-video rounded-2xl shadow-lg shadow-black/20 overflow-hidden">
-        <img
-          src="/image3.jpg" // <--- REPLACE THIS URL
-          alt="Hotel bar and seating"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
+              <div className="space-y-6 pt-12">
+                {/* Image 3: Video Aspect Dark-Toned */}
+                <div className="relative aspect-video rounded-2xl shadow-lg shadow-black/20 overflow-hidden">
+                  <img
+                    src="/image3.jpg"
+                    alt="Dining area with comfortable seating"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="225"
+                  />
+                </div>
 
-      {/* Image 4: Square Gold-Toned */}
-      <div className="relative aspect-square rounded-2xl shadow-lg shadow-[#bfa14a]/20 overflow-hidden">
-        <img
-          src="/image4.jpg" // <--- REPLACE THIS URL
-          alt="Elegant hotel breakfast setting"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</div>
+                {/* Image 4: Square Gold-Toned */}
+                <div className="relative aspect-square rounded-2xl shadow-lg shadow-[#bfa14a]/20 overflow-hidden">
+                  <img
+                    src="/image4.jpg"
+                    alt="Beautiful restaurant ambiance and service presentation"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                    width="300"
+                    height="300"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         {/* Features */}
         <div className="grid md:grid-cols-3 gap-8">
           {[

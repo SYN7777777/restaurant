@@ -2,7 +2,10 @@ import { Star, UtensilsCrossed, Phone } from "lucide-react"; // ✅ Added Phone 
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden bg-[#13331b]">
+    <section
+      id="home"
+      className="min-h-screen relative overflow-hidden bg-[#13331b]"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-[#bfa14a]/30 via-[#13331b] to-[#bfa14a]/10"></div>
 
       {/* Subtle background blur effects */}
@@ -29,7 +32,9 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-[#efdeb7] leading-relaxed max-w-xl">
-              Experience the authentic taste of Malaysian Nasi Kandar. Rich curries, tender meats, and aromatic rice that will transport you to the streets of Penang.
+              Experience the authentic taste of Malaysian Nasi Kandar. Rich
+              curries, tender meats, and aromatic rice that will transport you
+              to the streets of Penang.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
@@ -50,7 +55,10 @@ const Hero = () => {
 
               {/* VIEW MENU button (unchanged) */}
               <button className="group relative overflow-hidden border-2 border-[#bfa14a]/70 hover:border-[#bfa14a] transition-all duration-300 transform hover:scale-105 shadow-xl">
-                <a href="#menu"className="relative px-10 py-5 text-[#bfa14a] font-bold text-lg tracking-wider transition-colors duration-300">
+                <a
+                  href="#menu"
+                  className="relative px-10 py-5 text-[#bfa14a] font-bold text-lg tracking-wider transition-colors duration-300"
+                >
                   VIEW MENU
                 </a>
               </button>
@@ -79,22 +87,23 @@ const Hero = () => {
           {/* Right Section: Modern Food Image Display (Updated) */}
           <div className="relative p-8 lg:p-0">
             <div className="relative aspect-square max-w-lg mx-auto">
-              
               {/* Back layer: decorative border effect */}
               <div className="absolute inset-0 transform -rotate-12 rounded-3xl border-4 border-[#bfa14a]/50 transition-transform duration-700 group-hover:rotate-6 shadow-2xl"></div>
-              
+
               {/* Middle layer: a slight gold background blur */}
               <div className="absolute inset-0 transform rotate-6 bg-[#bfa14a]/10 rounded-3xl transition-transform duration-700 group-hover:-rotate-6"></div>
-              
+
               {/* Front layer: the food image itself */}
               <div className="group relative h-full w-full rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] transform">
-                <img 
-                  src="/landing-min.png" // ❗ UPDATE THIS PATH TO YOUR IMAGE FILE ❗
+                <img
+                  src="/landing-min.png"
                   alt="Authentic Nasi Kandar dish with rice, fried chicken, and rich curries"
                   className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-                  loading="eager"
+                  loading="lazy"
+                  width="400"
+                  height="400"
                 />
-                
+
                 {/* Optional: Dark overlay for effect */}
                 <div className="absolute inset-0 bg-[#13331b]/10 transition-colors duration-500 group-hover:bg-transparent"></div>
               </div>

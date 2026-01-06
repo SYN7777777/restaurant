@@ -71,21 +71,21 @@ const MenuSection = () => {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-  
+
   // Reset page when category changes
   useEffect(() => {
     setCurrentPage(1);
   }, [selected]);
-  
+
   // Filter dishes by category
-  const categorizedDishes = selected === "All" 
-    ? dishes 
+  const categorizedDishes = selected === "All"
+    ? dishes
     : dishes.filter((d) => d.category === selected);
 
   // Pagination Logic (Mobile-Only)
   const itemsPerPage = isMobile ? 6 : categorizedDishes.length; // 6 items for mobile (2 columns x 3 rows)
   const totalPages = Math.ceil(categorizedDishes.length / itemsPerPage);
-  
+
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
@@ -136,11 +136,10 @@ const MenuSection = () => {
             <button
               key={cat}
               onClick={() => setSelected(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-semibold tracking-wide border transition-all duration-300 ${
-                selected === cat
+              className={`px-6 py-2 rounded-full text-sm font-semibold tracking-wide border transition-all duration-300 ${selected === cat
                   ? "bg-gradient-to-r from-[#bfa14a] to-[#f0e6c3] text-[#13331b] border-[#f0e6c3]"
                   : "border-[#bfa14a]/40 text-[#efdeb7] hover:border-[#bfa14a] hover:text-white"
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -166,18 +165,17 @@ const MenuSection = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Pagination Controls (Mobile-Only) */}
         {isMobile && totalPages > 1 && (
           <div className="flex justify-center items-center gap-4 mt-8 pt-4 border-t border-[#bfa14a]/20">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
-              className={`p-3 rounded-full transition-colors duration-200 ${
-                currentPage === 1
+              className={`p-3 rounded-full transition-colors duration-200 ${currentPage === 1
                   ? 'text-[#bfa14a]/30 bg-[#13331b]'
                   : 'bg-[#bfa14a]/10 text-[#bfa14a] hover:bg-[#bfa14a]/30'
-              }`}
+                }`}
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -189,11 +187,10 @@ const MenuSection = () => {
             <button
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className={`p-3 rounded-full transition-colors duration-200 ${
-                currentPage === totalPages
+              className={`p-3 rounded-full transition-colors duration-200 ${currentPage === totalPages
                   ? 'text-[#bfa14a]/30 bg-[#13331b]'
                   : 'bg-[#bfa14a]/10 text-[#bfa14a] hover:bg-[#bfa14a]/30'
-              }`}
+                }`}
             >
               <ChevronRight className="h-5 w-5" />
             </button>
@@ -201,7 +198,7 @@ const MenuSection = () => {
         )}
 
         {/* View Menu Button */}
-       <div className="text-center mt-16">
+        <div className="text-center mt-16">
           <a
             href="/menu.pdf" // 👈 Replace this with your actual menu file path
             download="NasiKandar.Menu.pdf"
@@ -209,7 +206,7 @@ const MenuSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#bfa14a] to-[#f0e6c3] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             <span className="relative block px-12 py-4 text-[#bfa14a] group-hover:text-[#13331b] font-bold text-lg tracking-wider transition-colors duration-300">
-              WANT TO SEE FULL MENU? DOWNLOAD HERE 
+              WANT TO SEE FULL MENU? DOWNLOAD HERE
             </span>
           </a>
         </div>
